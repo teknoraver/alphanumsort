@@ -31,7 +31,7 @@ $ ls -1 /dev/tty*
 `alphanumsort` take cares of the numeric part and orders them by their numeric value:
 
 ```
-$ ./alphanumsort_c /dev/tty*
+$ ./test_c /dev/tty*
 /dev/tty
 /dev/tty0
 /dev/tty1
@@ -57,7 +57,7 @@ $ ./alphanumsort_c /dev/tty*
 ```
 
 ## Usage
-Just copy the function `alphanumsort` from the corresponding `.c` or `.cpp` file and use as custom sor function.  
+Just include the corresponding header,  `alphanumsort_c.h` or `alphanumsort_cpp.h` file and use it.  
 In C do it like:
 ```c
 char *strings[];

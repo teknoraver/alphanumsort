@@ -6,13 +6,12 @@ TESTARGS := 	loop0 loop0p1 loop0p14 loop0p2 \
 		'' a 1
 CFLAGS := -O2 -pipe -Wall
 CXXFLAGS := -O2 -pipe -Wall -std=c++17
-BIN := alphanumsort_c alphanumsort_cpp
+BIN := test_c test_cpp
 
 all:: $(BIN)
 
 test:: $(BIN)
-	./alphanumsort_c $(TESTARGS)
-	./alphanumsort_cpp $(TESTARGS)
+	$(foreach bin,$(BIN),./$(bin) $(TESTARGS);)
 
 clean::
 	$(RM) $(BIN)
